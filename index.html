@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
 
-            <!-- question answer part -->
-            <section class="my-5">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <!-- question answer part -->
+        <section class="my-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             How does JavaScript Work ?
                         </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          জাভাস্ক্রিপ্ট একটি হাই লেভেল ইন্টারপ্রেটেড প্রোগ্রামিং ল্যাঙ্গুয়েজ।হাই লেভে হওয়ায় আমরা সহজেই তা লিখতে এবং পড়তে পারি। কিন্তু আমাদের কম্পিউটার তা বোঝেনা ,কম্পিউটার সুধু মেশিন ল্যাঙ্গুয়েজ বোঝে।এই সমস্যার জন্য ব্রাওজার এবং সার্ভার সাইটে   জাভাস্ক্রিপ্ট ইঞ্জিন থাকে। জাভাস্ক্রিপ্ট ইঞ্জিন আমাদের জাভাস্ক্রিপ্ট কোডকে এক্সিকিউট এবং কম্পাইল করে মেশিন ল্যাঙ্গুয়েজে রূপান্তর করে।প্রথমে জাভাস্ক্রিপ্ট ইঞ্জিন জাভাস্ক্রিপ্ট  কোডকে পার্স করে। তারপর পার্স হয়ে আসা কোডকে অ্যাবস্ট্রাক্ট সিনট্যাক্স ট্রি নামে ডাটা স্ট্রাকচার তৈরি করে।তার পর সেটা মেশিন ল্যাঙ্গুয়েজে 
-                          রুপান্ত হয়।তারপর সেটা আমাদের কম্পিউটার  পরে আমাদের আউটপুট দেয়।এই পদ্ধতি জাভাস্ক্রিপ্ট কাজ করে। 
+                            জাভাস্ক্রিপ্ট একটি হাই লেভেল ইন্টারপ্রেটেড প্রোগ্রামিং ল্যাঙ্গুয়েজ। হাই লেভে হওয়ায় আমরা
+                            সহজেই তা লিখতে এবং পড়তে পারি। কিন্তু আমাদের কম্পিউটার তা বোঝেনা ,কম্পিউটার সুধু মেশিন
+                            ল্যাঙ্গুয়েজ বোঝে। এর জন্য ব্রাওজার এবং সার্ভার সাইটে জাভাস্ক্রিপ্ট ইঞ্জিন থাকে।
+                            জাভাস্ক্রিপ্ট ইঞ্জিন আমাদের জাভাস্ক্রিপ্ট কোডকে এক্সিকিউট এবং কম্পাইল করে মেশিন ল্যাঙ্গুয়েজে
+                            রূপান্তর করে।প্রথমে জাভাস্ক্রিপ্ট ইঞ্জিন জাভাস্ক্রিপ্ট কোডকে পার্স করে। তারপর পার্স হয়ে আসা
+                            কোডকে অ্যাবস্ট্রাক্ট সিনট্যাক্স ট্রি নামে ডাটা স্ট্রাকচার তৈরি করে।তার পর সেটা ধাপে ধাপে
+                            মেশিন ল্যাঙ্গুয়েজে রুপান্ত হয়।এই মাধ্যমেই আমরা জাভাস্ক্রিপ্ট কোডের আউটপুট পাই। এই পদ্ধতি
+                            জাভাস্ক্রিপ্ট কাজ করে।
                         </div>
-                      </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             What is the Difference Between Local Storage and Session Storage?
                         </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <p>লোকাল স্টোরেজ এবং সেশন স্টোরেজ উভয়েই একই পদ্ধতি  এবং প্রোপার্টি ব্যাবহার করে ডাটা স্টোর করে। উভয়েই অবজেক্ট টাইপ এবং ক্লাইন্ট সাইটে ডাটা স্টোর করে।এদের কার্য পদ্ধতি  এক হইলেও লোকাল স্টোরেজ এবং সেশন স্টোরেজের মধ্যে কিছু পার্থক্য রয়েছে।</p>
-                          <p><strong>লোকাল স্টোরেজ</strong> <br>
-                            লোকার স্টোরেজে স্টোর করা ডাটা পার্মানেন্ট থাকে,ব্রাওজার বা ট্যাব বন্ধ করলেও ডাটা থেকে যায়। 
-                            লোকাল স্টোরেজ এর সাইজ ১০ মেগাবাইটস পর্যন্ত হয়ে থাকে।
-                            এক ওয়েবসাইটের একাধিক পেজ একাধিক ট্যাবে  ওপেন করলেও প্রতেক পেজে ডাটা পাওয়া যায়।</p>
-                          <p>
-                            <strong>সেশন স্টোরেজ</strong> <br>
-                          সেশন স্টোরেজ ডাটা একটা নির্দিষ্ট সেশন পর্যন্ত থাকে, ব্রাওজার বা ট্যাব বন্ধ করলে ডাটা মুছে যায়।
-                          সেশন স্টোরেজ এর সাইজ ৫ মেগাবাইটস।
-                          এক ওয়েবসাইটের একাধিক পেজ একাধিক ট্যাবে  ওপেন করলেও প্রতেক পেজে ডাটা পাওয়া জায়না,সুধু প্রথম পেজেই 
-                          পাওয়া যায়। 
-                          </p>
+                            <p>লোকাল স্টোরেজ এবং সেশন স্টোরেজ উভয়েই একই পদ্ধতি এবং প্রোপার্টি ব্যাবহার করে ডাটা স্টোর
+                                করে। উভয়েই অবজেক্ট টাইপ এবং কী ভ্যালু পেয়ার আকারে ডাটা স্টোর করে।এদের কার্য পদ্ধতি এক
+                                হইলেও লোকাল স্টোরেজ এবং সেশন স্টোরেজের মধ্যে কিছু পার্থক্য রয়েছে।</p>
+                            <p><strong>লোকাল স্টোরেজ</strong> <br>
+                                ১।লোকার স্টোরেজে স্টোর করা ডাটা পার্মানেন্ট থাকে,ব্রাওজার বা ট্যাব বন্ধ করলেও ডাটা থেকে
+                                যায়।
+                                ২।লোকাল স্টোরেজ এর সাইজ ১০ মেগাবাইটস পর্যন্ত হয়ে থাকে।
+                                ৩।এক ওয়েবসাইটের একাধিক পেজ একাধিক ট্যাবে ওপেন করলেও প্রতেক পেজে ডাটা পাওয়া যায়।</p>
+                            <p>
+                                <strong>সেশন স্টোরেজ</strong> <br>
+                                ১।সেশন স্টোরেজ ডাটা একটা নির্দিষ্ট সেশন পর্যন্ত থাকে, ব্রাওজার বা ট্যাব বন্ধ করলে ডাটা
+                                মুছে যায়।
+                                ২।সেশন স্টোরেজ এর সাইজ ৫ মেগাবাইটস।
+                                ৩।এক ওয়েবসাইটের একাধিক পেজ একাধিক ট্যাবে ওপেন করলেও প্রতেক পেজে ডাটা পাওয়া জায়না,সুধু
+                                প্রথম পেজেই
+                                পাওয়া যায়।
+                            </p>
                         </div>
-                      </div>
                     </div>
-                  </div>
-            </section>
-        </main>
-        <footer></footer>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 
-        <!-- add javascript  file  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="./js/app.js"></script>
-    </body>
+    <!-- add javascript  file  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="./js/app.js"></script>
+</body>
 </html>
